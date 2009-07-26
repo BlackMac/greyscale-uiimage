@@ -3,6 +3,7 @@
 //  Klepto
 //
 //  Created by Jonathan George on 4/25/09.
+//  Edited by Stefan Lange-Hegermann on 7/26/09.
 //  Copyright 2009 JDG. All rights reserved.
 //
 
@@ -16,6 +17,8 @@ typedef enum {
 
 @interface UIImage (Greyscale)
 
+- (UIImage *) convertToMonochromeWithOffset:(NSInteger)offset;
+- (UIImage *) convertToMonochrome;
 - (UIImage *) convertToGreyscale;
 
 @end

@@ -17,7 +17,7 @@ typedef enum {
 
 @interface UIImage (Greyscale)
 
-- (UIImage *) convertToMonochromeWithOffset:(NSInteger)offset;
+- (UIImage *) convertToMonochromeWithThreshold:(NSInteger)threshold;
 - (UIImage *) convertToMonochrome;
 - (UIImage *) convertToGreyscale;
 

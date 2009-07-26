@@ -13,10 +13,10 @@
 @implementation UIImage (Greyscale)
 
 - (UIImage *) convertToMonochrome {
-	return [self convertToMonochromeWithOffset:128];
+	return [self convertToMonochromeWithThreshold:128];
 }
 
-- (UIImage *) convertToMonochromeWithOffset:(NSInteger)offset {
+- (UIImage *) convertToMonochromeWithThreshold:(NSInteger)threshold {
 	int colors = kGreen;
 	int m_width = self.size.width;
 	int m_height = self.size.height;
@@ -48,7 +48,7 @@
 			if (colors & kGreen) {sum += (rgbPixel>>16)&255; count++;}
 			if (colors & kBlue) {sum += (rgbPixel>>8)&255; count++;}
 			uint8_t pixelgray=sum/count;
-			if (pixelgray>offset) {pixelgray=255;}
+			if (pixelgray>threshold) {pixelgray=255;}
 			else {pixelgray=0;}
 			if (m_up) m_imageData[y*m_width+x]=pixelgray;
 			else m_imageData[(x*m_height-y+m_height)-1]=pixelgray;

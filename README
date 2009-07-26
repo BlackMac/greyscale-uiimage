@@ -1,1 +1,6 @@
-Usage: [[UIImage imageNamed:@"red_rose.png"] convertToGreyscale];
+Usage:
+[[UIImage imageNamed:@"red_rose.png"] convertToMonochromeWithThreshold:80];
+
+[[UIImage imageNamed:@"red_rose.png"] convertToMonochrome];
+
+[[UIImage imageNamed:@"red_rose.png"] convertToGreyscale];
